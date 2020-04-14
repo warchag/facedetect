@@ -17,7 +17,7 @@ def draw_boundary(img,classifier,scalFactor,minNeigh,color,clf,train):
         coords = [x,y,w,h]
     return img,coords
 def detect(img,facecase,mem_id,clf,train):
-    img,coordsFace= draw_boundary(img,facecase,1.1,12,(0,0,255),clf,train)
+    img,coordsFace= draw_boundary(img,facecase,1.3,10,(0,0,255),clf,train)
     if len(coordsFace) == 4:
         result = img[coordsFace[1]:coordsFace[1]+coordsFace[3],coordsFace[0]:coordsFace[0]+coordsFace[2]]
         if train == "train":
